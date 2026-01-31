@@ -1,7 +1,9 @@
 import React, { useRef, useEffect, useState, useLayoutEffect } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:3001'); // Connect to backend
+const socket = io('https://real-time-collaborative-drawing-canvas-1.onrender.com', {
+    transports: ['websocket']
+});
 
 const Canvas = ({ color, size, tool, setUsers, users }) => {
     const canvasRef = useRef(null);
