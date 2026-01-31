@@ -5,8 +5,13 @@ import io from 'socket.io-client';
 import './App.css';
 
 // Socket instance needs to be accessed by toolbar for Undo
-const socket = io('http://localhost:3001');
+// DELETE THIS LINE:
+// const socket = io('http://localhost:3001');
 
+// PASTE THIS INSTEAD:
+const socket = io('https://real-time-collaborative-drawing-canvas-1.onrender.com', {
+  transports: ['websocket']
+});
 function App() {
   const [color, setColor] = useState('#000000');
   const [size, setSize] = useState(5);
