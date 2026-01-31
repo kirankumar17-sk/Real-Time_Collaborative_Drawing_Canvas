@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #e0e5ec;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* --- Floating Toolbar --- */
+.toolbar {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Frosted Glass Effect */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  padding: 10px 25px;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  z-index: 100;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Divider line between groups */
+.group:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding-right: 20px;
+}
+
+/* --- Buttons --- */
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  color: #444;
+  background: #f0f2f5;
+}
+
+button:hover {
+  background: #e1e4e8;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Tool Buttons (Circle shape) */
+.tool-btn {
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 16px;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+}
+
+/* Active State for Tools */
+.tool-btn.active {
+  background: #3b82f6;
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+/* Action Buttons */
+.btn-undo {
+  color: #444;
+}
+
+.btn-clear {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.btn-clear:hover {
+  background: #fecaca;
+}
+
+/* --- Inputs --- */
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+input[type="range"] {
+  width: 100px;
+  accent-color: #3b82f6;
+  cursor: pointer;
+}
+
+/* --- User Counter --- */
+.user-count {
+  font-weight: 600;
+  color: #3b82f6;
+  background: #dbeafe;
+  padding: 8px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+/* --- Cursors --- */
+.cursor {
+  position: absolute;
+  pointer-events: none;
+  transition: top 0.1s linear, left 0.1s linear;
+  z-index: 50;
+}
+
+.cursor-label {
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+canvas {
+  display: block;
+  touch-action: none;
+}
