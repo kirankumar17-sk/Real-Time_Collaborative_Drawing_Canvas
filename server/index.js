@@ -9,7 +9,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173", // Vite's default port
+        origin: "https://real-time-collaborative-drawing-canvas-ca5q3ozp4.vercel.app/", // Vite's default port
         methods: ["GET", "POST"],
     },
 });

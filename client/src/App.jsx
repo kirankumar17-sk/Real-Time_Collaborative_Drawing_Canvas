@@ -9,7 +9,7 @@ import './App.css';
 // const socket = io('http://localhost:3001');
 
 // PASTE THIS INSTEAD:
-const socket = io('https://real-time-collaborative-drawing-canvas-1.onrender.com', {
+const socket = io('https://real-time-collaborative-drawing-canvas-3.onrender.com', {
   transports: ['websocket']
 });
 function App() {

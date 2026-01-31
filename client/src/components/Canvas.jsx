@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState, useLayoutEffect } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('https://real-time-collaborative-drawing-canvas-1.onrender.com', {
+const socket = io('https://real-time-collaborative-drawing-canvas-3.onrender.com', {
     transports: ['websocket']
 });
 
